@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head::head}">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}">
+  Navbar
+</div>
+
+
+<div class="container" >
+  <h2 class="text-center text-white">Welcome to FixMyRide</h2>
+</div>
+<div class="has-bg-img">
+
+  <img class="bg-img" src="/images/33.jpg" alt="Bg image">
+</div>
+
+<div>
+  <footer class="footer bg-transparent  py-2">
+    <th:block th:include="~{/fragments/footer}"></th:block>
+  </footer>
+</div>
+</body>
+</html>

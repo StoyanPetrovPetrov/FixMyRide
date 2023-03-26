@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head::head"></head>
+
+<body>
+<div th:replace="fragments/navbar :: navbar">
+    Navbar
+</div>
+
+<div class="container">
+    <h2 class="text-center text-white">A page for mechanics</h2>
+</div>
+
+<header>
+    <div class="has-bg-img">
+        <img class="bg-img" src="/images/mechanic.jpg" alt="Bg image">
+    </div>
+</header>
+
+<h1>Update Mechanic Profile</h1>
+<form method="post" th:action="@{/mechanic}">
+    <div class="row">
+        <div class="col">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required th:field="*{firstName}">
+    </div>
+        <div class="col">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required th:field="*{lastName}">
+    </div>
+        <div class="col">
+        <label for="certification">Certification:</label>
+        <input type="text" id="certification" name="certification" required th:field="*{certification}">
+    </div>
+        <div class="col">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required th:field="*{phone}">
+    </div>
+        <div class="col">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required th:field="*{email}">
+    </div>
+
+    <button type="submit">Update Profile</button>
+    </div>
+</form>
+
+
+<footer class="footer bg-transparent py-2">
+    <th:block th:include="~{/fragments/footer}"></th:block>
+</footer>
+</body>
+</html>

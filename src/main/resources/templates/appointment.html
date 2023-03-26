@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head::head}"></head>
+
+
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}">
+  Navbar
+</div>
+
+<!--<div class="container">
+  <h1>Appointment Details</h1>
+  <table class="table table-striped">
+    <tbody>
+    <tr>
+      <td>ID:</td>
+      <td th:text="${appointment.id}"></td>
+    </tr>
+    <tr>
+      <td>Start Time:</td>
+      <td th:text="${appointment.startTime}"></td>
+    </tr>
+    <tr>
+      <td>End Time:</td>
+      <td th:text="${appointment.endTime}"></td>
+    </tr>
+    <tr>
+      <td>Notes:</td>
+      <td th:text="${appointment.notes}"></td>
+    </tr>
+    <tr>
+      <td>Vehicle ID:</td>
+      <td th:text="${appointment.vehicleId}"></td>
+    </tr>
+    <tr>
+      <td>Mechanic ID:</td>
+      <td th:text="${appointment.mechanicId}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>-->
+</body>
+</html>

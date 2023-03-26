@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head th:replace="~{fragments/head :: head}"></head>
+
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}">
+  Navbar
+</div>
+<main>
+<form method="post" th:action="@{/vehicles}">
+  <div class="form-group">
+    <div class="label-holder textCol d-flex justify-content-center">
+  <label for="make" class="h4 mb-2 text-white">Make:</label>
+    </div>
+  <input type="text" id="make" name="make" th:field="*{make}" required>
+  </div>
+
+  <div class="form-group">
+    <div class="label-holder textCol d-flex justify-content-center">
+  <label for="model"class="h4 mb-2 text-white">Model:</label>
+    </div>
+  <input type="text" id="model" name="model" th:field="*{model}" required>
+  </div>
+
+  <div class="form-group">
+    <div class="label-holder textCol d-flex justify-content-center">
+  <label for="year" class="h4 mb-2 text-white">Year:</label>
+    </div>
+  <input type="number" id="year" name="year" th:field="*{year}" required>
+  </div>
+
+  <div class="form-group">
+    <div class="label-holder textCol d-flex justify-content-center">
+  <label for="vin" class="h4 mb-2 text-white">VIN:</label>
+    </div>
+  <input type="text" id="vin" name="vin" th:field="*{vin}" required>
+  </div>
+
+  <div class="form-group">
+    <div class="label-holder textCol d-flex justify-content-center">
+  <label for="userId" class="h4 mb-2 text-white">User ID:</label>
+    </div>
+  <input type="number" id="userId" name="userId" th:field="*{userId}" required>
+  </div>
+
+  </div>
+  <div class="button-holder d-flex justify-content-center">
+  <button type="submit">Create</button>
+  </div>
+
+</form>
+</main>
+</body>
+
+</html>
